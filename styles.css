@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff; /* Light text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    background: #5e5555; /* Darker header background */
+    color: #ffffff;
+    padding: 50px; /* Adjust padding */
+    text-align: center;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+}
+
+header:hover {
+    background: #2b2a2b; /* Change background color on hover */
+    transform: scale(1.02); /* Slightly enlarge the header */
+}
+
+.circle {
+    width: 300px; /* Increased size */
+    height: 300px; /* Increased size */
+    margin-bottom: 20px; /* Space between image and title */
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Ensure the image fits within the circle */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 10px rgb(255, 0, 0); /* Add shadow on hover */
+}
+
+header h1 {
+    transition: text-shadow 0.3s; /* Smooth transition for text shadow */
+}
+
+header:hover h1 {
+    text-shadow: 2px 2px 5px rgb(255, 0, 0); /* Add text shadow on hover */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00fff2; /* Bright link color */
+    text-decoration: none;
+    transition: text-decoration 0.3s; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+#about {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    background-color: #2c3e50; /* Dark blue background for About section */
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 50px auto; /* Center the about text */
+}
+
+#projects {
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center the section title */
+    margin: 0; /* Remove margin */
+    background-color: #3498db; /* Bright blue background for Projects section */
+}
+
+.projects-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the project cards horizontally */
+    flex-wrap: wrap; /* Allow wrapping of project cards */
+    margin: 20px 0; /* Add some margin */
+}
+
+.project-card {
+    perspective: 1000px; /* Add perspective to the card */
+    margin: 10px; /* Space between cards */
+    transition: transform 0.3s; /* Smooth transition */
+    max-width: 450px; /* Limit the width of each project card */
+    width: 100%; /* Full width for smaller screens */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Darker shadow on hover */
+}
+
+.project-inner {
+    position: relative;
+    width: 100%; /* Use full width of the card */
+    height: 300px; /* Fixed height for the card */
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.project-card:hover .project-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face when not visible */
+    border-radius: 5px;
+}
+
+.project-front {
+    background: #1f1f1f; /* Dark background for the front */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.project-front img {
+    transition: transform 0.3s; /* Smooth transition */
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-card:hover .project-front img {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+.project-back {
+    background: #ff5b03; /* Bright color for the back */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg); /* Hide the back face initially */
+    padding: 15px;
+}
+
+.project-info {
+    text-align: center;
+}
+
+#contact {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 0; /* Remove margin */
+    background-color: #e74c3c; /* Red background for Contact section */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f; /* Dark footer background */
+    color: #ffffff; /* Light footer text */
+}
+
+button {
+    background-color: #ff5b03; /* Button background */
+    color: #ffffff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    width: 100%; /* Full width for the button */
+}
+
+button:hover {
+    background-color: #e04e00; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+form {
+    display: flex; /* Use flexbox for the form */
+    flex-direction: column; /* Stack form elements vertically */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit the width of the form */
+    text-align: center; /* Center text inside the form */
+}
+
+input, textarea {
+    margin: 10px 0; /* Add some space between inputs */
+    padding: 10px; /* Add padding for better appearance */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="circle">
+            <img src="marck.jpg" alt="Marck Adrian Trinidad">
+        </div>
+        <h1>Marck Adrian Trinidad</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Hi! I'm Marck Adrian Trinidad. 2nd year BSIT student of Fullbright College</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>SKILLS</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <img src="ehh.jpg" alt="Project 1">
+                        <div class="project-info">
+                            <h3>Game Developer</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="project-back">
+                        <h3>More Info</h3>
+                        <p>A game developer is a skilled professional who designs, creates, and programs video games. They are responsible for almost every aspect of video game production, from the initial concept phase through to the final testing. Game development involves a wide range of skills and disciplines, including programming, design, art, audio, and quality assurance. Game developers may work on a variety of projects, from simple mobile games to complex console titles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-inner">
+                    <div class="project-front">
+                        <img src="code.jpg" alt="Project 2">
+                        <div class="project-info">
+                            <h3>PROGRAMMING</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="project-back">
+                        <h3>More Info</h3>
+                        <p>Programming is the process of giving a set of instructions to a computer to execute tasks. It involves writing code in various programming languages such as Python, C, C++, and Java, among others.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Marck Adrian Trinidad</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
